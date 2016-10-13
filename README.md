@@ -1,4 +1,4 @@
-# UCOmove [![Build Status](https://travis-ci.com/Gnzlt/UCOmove.svg?branch=master)](https://travis-ci.com/Gnzlt/UCOmove)
+# UCOmove [![Build Status](https://travis-ci.org/Gnzlt/UCOmove.svg?branch=master)](https://travis-ci.org/Gnzlt/UCOmove)
 A simple Android app designed following the MVP architecture for the University of Córdoba
 
 
