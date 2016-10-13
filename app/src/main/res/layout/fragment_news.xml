@@ -1,0 +1,32 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".news.NewsFragment">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/general_margin_small"
+                android:paddingTop="@dimen/general_margin_small"
+                android:scrollbars="vertical"/>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <include
+            android:id="@+id/empty"
+            layout="@layout/partial_empty"/>
+
+        <include
+            android:id="@+id/progress"
+            layout="@layout/partial_progress_bar"/>
+    </RelativeLayout>
+</layout>

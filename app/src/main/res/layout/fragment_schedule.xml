@@ -1,0 +1,58 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".schedule.ScheduleFragment">
+
+        <LinearLayout
+            android:id="@+id/origins"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/primary_dark"
+            android:elevation="@dimen/small_elevation"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/title_cordoba"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/text_cordoba"
+                android:textAppearance="@style/Text.Tab.SubTitles"/>
+
+            <TextView
+                android:id="@+id/title_rabanales"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/text_rabanales"
+                android:textAppearance="@style/Text.Tab.SubTitles"/>
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/origins"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+        <include
+            android:id="@+id/empty"
+            layout="@layout/partial_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/origins"/>
+
+        <include
+            android:id="@+id/progress"
+            layout="@layout/partial_progress_bar"/>
+    </RelativeLayout>
+</layout>

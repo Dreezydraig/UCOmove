@@ -1,0 +1,69 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.3"
+    defaultConfig {
+        applicationId "com.gnzlt.ucotren"
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 48
+        versionName "3.0.10"
+
+        buildConfigField "String", "PARSE_SERVER", "\"${parse_server}\""
+        buildConfigField "String", "PARSE_APP_ID", "\"${parse_app_id}\""
+        buildConfigField "String", "PARSE_CLIENT_KEY", "\"${parse_client_key}\""
+        buildConfigField "String", "BUS_URL", "\"${bus_url}\""
+        buildConfigField "String", "BUS_API_TOKEN", "\"${bus_api_token}\""
+
+        resValue "string", "parse_gcm_sender_id", "\"${parse_gcm_sender_id}\""
+    }
+
+    dataBinding.enabled = true
+
+    signingConfigs {
+        config {
+            storeFile file('keystore.jks')
+            storePassword "\"${keystore_password}\""
+            keyAlias "\"${key_alias}\""
+            keyPassword "\"${key_password}\""
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            signingConfig signingConfigs.config
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+ext.supportLibVersion = '24.2.1'
+ext.playServicesLibVersion = '9.6.1'
+
+dependencies {
+    compile "com.android.support:appcompat-v7:${supportLibVersion}"
+    compile "com.android.support:cardview-v7:${supportLibVersion}"
+    compile "com.android.support:support-v4:${supportLibVersion}"
+    compile "com.android.support:design:${supportLibVersion}"
+    compile "com.google.firebase:firebase-core:${playServicesLibVersion}"
+    compile "com.google.firebase:firebase-crash:${playServicesLibVersion}"
+    compile "com.google.android.gms:play-services-gcm:${playServicesLibVersion}"
+    compile "com.google.android.gms:play-services-location:${playServicesLibVersion}"
+    compile "com.android.support.constraint:constraint-layout:1.0.0-alpha9"
+
+    compile "com.parse:parse-android:1.13.1"
+    compile "com.squareup.okhttp3:okhttp:3.4.1"
+    compile "com.squareup.retrofit2:retrofit:2.1.0"
+    compile "com.squareup.retrofit2:converter-gson:2.1.0"
+
+    compile "com.github.bumptech.glide:glide:3.7.0"
+    compile "com.github.bumptech.glide:okhttp3-integration:1.4.0@aar"
+
+    compile "com.github.hotchemi:android-rate:1.0.1"
+    compile "com.github.jakob-grabner:Circle-Progress-View:v1.2.9.1"
+}
+
+apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="text_train">Tren</string>
+    <string name="text_bus">Autobús</string>
+    <string name="text_schedule">Horario</string>
+    <string name="text_settings">Ajustes</string>
+    <string name="text_tickets">Billetes</string>
+    <string name="text_about">Acerca de</string>
+    <string name="error_no_estimations">Sin estimaciones</string>
+    <string name="error_no_departures">No hay salidas disponibles</string>
+    <string name="error_no_estimations_today">No hay estimaciones disponibles</string>
+    <string name="text_news">Noticias</string>
+    <string name="error_no_news">No hay noticias disponibles</string>
+    <string name="text_about_rate">Puntúanos en Google Play</string>
+    <string name="text_about_twitter">Síguenos en Twitter</string>
+    <string name="error_no_tickets">No hay billetes disponibles</string>
+</resources>
