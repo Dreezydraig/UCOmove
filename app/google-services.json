@@ -1,0 +1,50 @@
+{
+  "project_info": {
+    "project_number": "test",
+    "firebase_url": "http://test",
+    "project_id": "test",
+    "storage_bucket": "test"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "test",
+        "android_client_info": {
+          "package_name": "com.gnzlt.ucotren"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "test",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gnzlt.ucotren",
+            "certificate_hash": "test"
+          }
+        },
+        {
+          "client_id": "test",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "test"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
